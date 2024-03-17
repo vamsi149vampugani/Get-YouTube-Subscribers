@@ -1,0 +1,197 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-16T05:16:35.138Z",
+    "end": "2024-03-16T05:16:35.363Z",
+    "duration": 225,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3081de32-13fc-4fa7-9152-fc18de6d03f0",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39124cdb-5f6c-462e-9469-cc289fc8199b",
+          "title": "Subscribers API",
+          "fullFile": "C:\\Users\\HP\\OneDrive\\Desktop\\YOUTUBE SUBSCRIBERS\\__tests__\\tests.js",
+          "file": "\\__tests__\\tests.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "601865fa-206a-4f66-84f2-3ec5b081022d",
+              "title": "GET /subscribers",
+              "fullFile": "C:\\Users\\HP\\OneDrive\\Desktop\\YOUTUBE SUBSCRIBERS\\__tests__\\tests.js",
+              "file": "\\__tests__\\tests.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get a list of all subscribers",
+                  "fullTitle": "Subscribers API GET /subscribers should get a list of all subscribers",
+                  "timedOut": false,
+                  "duration": 138,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n  .get('/subscribers')\n  .end((err, res) => {\n    if (err) return done(err);\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('array');\n    done();\n  });",
+                  "err": {},
+                  "uuid": "57cbe642-8d7a-41a0-9e58-35f25ba6d6c0",
+                  "parentUUID": "601865fa-206a-4f66-84f2-3ec5b081022d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "57cbe642-8d7a-41a0-9e58-35f25ba6d6c0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 138,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "b07df96f-b504-48ac-8557-37f39003b0c2",
+              "title": "GET /subscribers/names",
+              "fullFile": "C:\\Users\\HP\\OneDrive\\Desktop\\YOUTUBE SUBSCRIBERS\\__tests__\\tests.js",
+              "file": "\\__tests__\\tests.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get names and subscribed channels for each subscriber",
+                  "fullTitle": "Subscribers API GET /subscribers/names should get names and subscribed channels for each subscriber",
+                  "timedOut": false,
+                  "duration": 14,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "chai.request(app)\n  .get('/subscribers/names')\n  .end((err, res) => {\n    if (err) return done(err);\n    expect(res).to.have.status(200);\n    expect(res.body).to.be.an('array');\n    done();\n  });",
+                  "err": {},
+                  "uuid": "a5285015-0e35-4aef-ac73-2e544b291a89",
+                  "parentUUID": "b07df96f-b504-48ac-8557-37f39003b0c2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a5285015-0e35-4aef-ac73-2e544b291a89"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 14,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "91c3f973-6f73-4620-97cf-4f427dfb7231",
+              "title": "GET /subscribers/:id",
+              "fullFile": "C:\\Users\\HP\\OneDrive\\Desktop\\YOUTUBE SUBSCRIBERS\\__tests__\\tests.js",
+              "file": "\\__tests__\\tests.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should get subscriber information by ID",
+                  "fullTitle": "Subscribers API GET /subscribers/:id should get subscriber information by ID",
+                  "timedOut": false,
+                  "duration": 52,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Fetch a subscriber document from the collection\nconst subscriber = await Subscriber.findOne();\nif (!subscriber) {\n  throw new Error('No subscriber documents found in the collection.');\n}\n// Get the _id from the subscriber document\nconst subscriberId = subscriber._id.toString();\n// Making the actual request using chai-http\nconst response = await chai.request(app).get(`/subscribers/${subscriberId}`);\n\n// Assertions\nexpect(response).to.have.status(200);\nexpect(response.body).to.have.property('_id', subscriberId);",
+                  "err": {},
+                  "uuid": "0a9f39a7-5642-48ed-b645-47b87627c74b",
+                  "parentUUID": "91c3f973-6f73-4620-97cf-4f427dfb7231",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0a9f39a7-5642-48ed-b645-47b87627c74b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 52,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

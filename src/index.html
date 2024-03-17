@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GET Youtube Subscribers</title>
+    <style>
+
+      
+      body {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 250px;;
+        overflow: hidden;
+        position: absolute;
+        top: 170px;
+        left: 400px;
+        /* padding: 200px 50px 0px 50px;
+        border-radius: 50% / 11%; */
+      }
+      .container {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 30px 0px 50px 0px;  
+        font-family: Tahoma, Helvetica, "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+        background-color: #e21;
+        border-radius: 109px;
+        color: #ffffff;
+        width: 100vw;
+        opacity: 0.8;
+        /* - */
+        
+      }
+      .traingle{
+        position: absolute;
+        top: 52%; /* Places the triangle below the container */
+        left: 53%; /* Centers the triangle horizontally */
+        transform: translateX(-50%);
+        border-top: 70px solid transparent;
+        border-left: 120px solid white;
+        border-bottom: 68px solid transparent; 
+        align-items: center;
+        opacity: 0.8;
+        
+      }
+      h1 {
+        text-align: center;
+        font-size: 250%;
+        color: #ffffff;
+
+        margin-bottom: 48px;
+      }
+      b {
+        color: black;
+      }
+      ol {
+        padding: 1% 0 0 10%;
+      }
+
+      h3 {
+        text-align: center;
+        color: black;
+      }
+      em {
+        color: black;
+        /* background-color: #ffffff; */
+      }
+      hr {
+        width: 85%;
+        color: #009b95;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="traingle"></div>
+      <div>
+        <h1>GET <b>YOUTUBE</b> SUBSCRIBERS</h1>
+      </div>
+      <hr />
+      <div>
+        <h3>THE APIs PROVIDED BY THIS APPLICATION ARE FOLLOWING:</h3>
+
+        <ul>
+          <li>
+            <p>
+              <strong>GET </strong><b><em>/subscribers </em></b>: Response with
+              an array of subscribers (an Object).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>GET </strong><b><em>/subscribers/names </em></b>: Response
+              with an array of subscribers (an Object with two fields i.e name &
+              subscribed channel).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>GET </strong><b><em>/subscribers/:id </em></b>: Response
+              with a subscriber (an Object) with given id.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
